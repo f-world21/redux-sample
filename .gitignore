@@ -1,2 +1,4 @@
 # node / npm
 node_modules
+
+dist/main.js
