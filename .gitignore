@@ -1,4 +1,6 @@
 # node / npm
 node_modules
 
-dist/*.js
+dist/*
+!dist/.kepp
+!dist/.index.html
