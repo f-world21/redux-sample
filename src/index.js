@@ -1,17 +1,17 @@
-import _ from 'lodash';
-import printMe from './print.js';
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import rootReducer from './reducers'
+import App from './components/App'
 
-function component() {
-  let element = document.createElement('div');
-  var btn = document.createElement('button');
+const store = createStore(rootReducer)
 
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+console.log(store.getState())
 
-  btn.innerHTML = 'Click me and check the console!';
-  btn.onclick = printMe;
-  element.appendChild(btn);
-
-  return element;
-}
-
-document.body.appendChild(component());
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+)

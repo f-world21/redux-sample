@@ -4,7 +4,7 @@ import { VisibilityFilters } from '../actions'
 
 const Footer = () => (
   <div>
-    <span>sShow: </show>
+    <span>sShow: </span>
     <FilterLink filter={VisibilityFilters.SHOW_ALL}>
       All
     </FilterLink>
